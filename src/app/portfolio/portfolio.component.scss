@@ -1,0 +1,59 @@
+:host {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 7rem 10rem;
+}
+
+.project-detail {
+    grid-column: 1/2;
+    background: #000;
+}
+
+.carousel {
+    grid-column: 2/4;
+}
+
+.projects-wrapper {
+    grid-column: 1/4;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.header-main {
+    display: flex;
+    align-items: center;
+}
+
+.header-main span, .header-main h2 {
+    font-size: 2.7rem;
+    font-weight: 500;
+    letter-spacing: 0.7rem;
+    margin: 0;
+}
+
+.header-main span {
+    color: #BC0606;
+    margin-right: 0.5rem;
+}
+
+.header h3{
+    font-size: 3.7rem;
+    font-weight: 200;
+    margin: 3rem 0;
+}
+
+.description p {
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+.project-card {
+    width: 98%;
+    height: 15rem;
+    margin: 1rem;
+    background-color: darkslategrey;
+}
+
+.project-card:hover {
+    transform: scale(1.3);
+}

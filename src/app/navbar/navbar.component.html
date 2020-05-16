@@ -1,0 +1,35 @@
+<div class="nav-bg" [ngClass]="{'active': active}">
+    <nav>
+        <div class="ghost-menu"></div>
+        <div class="logo">
+            <span>T.K.</span>
+        </div>
+        <div class="spacer"></div>
+        <ul class="nav-links">
+            <li>
+                <a mat-button [routerLink]="['/landing']">Home</a>
+            </li>
+            
+            <li>
+                <a mat-button [routerLink]="['/about']">About me</a>
+            </li>
+            
+            <li>
+                <a mat-button [routerLink]="['/skills']">Skills</a>
+            </li>
+            
+            <li>
+                <a mat-button [routerLink]="['/portfolio']">Portfolio</a>
+            </li>
+            
+            <li>
+                <a mat-button [routerLink]="['/contact']">Contact</a>
+            </li>
+            
+        </ul>
+        <div class="mobile-menu" (click)="activate()">
+            <span class="line line-top" [ngClass]="{'active': active}"></span>
+            <span class="line line-bottom" [ngClass]="{'active': active}"></span>
+        </div>
+    </nav>
+</div>

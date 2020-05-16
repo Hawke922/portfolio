@@ -1,0 +1,84 @@
+:host {
+    display: grid;
+    height: 100vh;
+    place-items: center;
+    grid-template-rows: 1fr 1fr;
+    background-image: url("../../assets/bg-laptop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.container {
+    grid-row: 1/2;
+    text-align: center;
+}
+
+.container h1 {
+    font-size: 5rem;
+    font-weight: 200;
+    letter-spacing: 0.1rem;
+}
+
+.container h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+}
+
+.icons {
+    align-self: end;
+    grid-row: 2/3;
+    margin-bottom: 1rem;
+}
+
+fa-icon {
+    padding: 0.5rem;
+    font-size: 3.5rem;
+    text-align: center;
+    color: #000;
+}
+
+fa-icon:hover {
+    opacity: 0.7;
+}
+
+
+@media screen and (max-width: 950px) {
+    :host {
+        background-image: url("../../assets/bg-tablet-cropped.jpg");
+        background-position: center;
+    }
+
+    fa-icon {
+        padding: 2rem;
+        font-size: 6rem;
+    }
+}
+
+@media screen and (max-width: 675px) {
+    :host {
+        grid-template-rows: repeat(3, 1fr);
+        background-image: url("../../assets/bg-laptop-cropped-smartphone.jpg");
+        background-position: end;
+    }
+
+    .container {
+        align-self: center;
+        grid-row: 1/3;
+    }
+
+    .container h2 {
+        padding: 0 5rem;
+    }
+
+    .icons {
+        grid-row: 3/4;
+    }
+    
+    fa-icon {
+        padding: 2rem;
+        font-size: 5rem;
+    }
+}
