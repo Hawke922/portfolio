@@ -1,4 +1,4 @@
 <app-navbar></app-navbar>
-<main [@routeAnimations]="getRouterOutletState(o)" class="content">
-    <router-outlet #o="outlet"></router-outlet>
+<main [@routeAnimations]="prepareRoute(outlet)">
+    <router-outlet #outlet="outlet"></router-outlet>
 </main>

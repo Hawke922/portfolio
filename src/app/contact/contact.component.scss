@@ -1,0 +1,68 @@
+:host {
+    display: grid;
+    height: 100vh;
+    place-items: center;
+}
+
+.contact-card {
+    background: #000;
+    width: 60rem;
+}
+
+.header-main {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.header-main span, .header-main h2 {
+    font-size: 2.7rem;
+    font-weight: 500;
+    letter-spacing: 0.7rem;
+    margin: 0;
+}
+
+.header-main span {
+    color: #BC0606;
+    margin-right: 0.5rem;
+}
+
+.about p {
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+.links.mat-card{
+    padding: 1.5rem 2rem;
+}
+
+.links {
+    margin-top: 3rem;
+    background-color: #111;
+    font-size: 2rem;
+}
+
+.links a {
+    margin: 0.7rem;
+}
+
+.links a:nth-child(2) {
+    margin-top: 0;
+}
+
+.links a:last-child {
+    margin-bottom: 0;
+}
+
+.links a:hover {
+    color: #BC0606;
+}
+
+.links span {
+    display: inline-block;
+    width: 10rem;
+}
+
+.links button {
+    justify-self: end;
+}

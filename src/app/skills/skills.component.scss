@@ -35,8 +35,7 @@
 .header h3{
     font-size: 3.7rem;
     font-weight: 200;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin: 3rem 0;
 }
 
 .tab {
@@ -44,7 +43,8 @@
     grid-template-columns: repeat(3, 1fr);
     margin-top: 0.3rem;
 }
-
+/*white-space: normal added to make sure that ngfor break lines properly*/
+/*white-space: pre-line will break lines only where I do /n within the value itself*/
 .box {
     margin: 0.3rem;
     width: 15.3rem;
@@ -54,10 +54,10 @@
     place-items: center;
     font-size: 2rem;
     font-weight: 300;
-    text-align: center;
     line-height: 3rem;
-    cursor: pointer;
+    white-space: normal;
 }
+
 .logo-box {
     grid-column: 3/4;
     grid-row: 1/4;
@@ -93,4 +93,27 @@
     width: 90%;
 }
 
-@media screen and (max-width: 775px) {}
+@media screen and (max-width: 1200px) {
+    :host {
+        grid-template-columns: 65rem;
+        padding-bottom: 7rem;
+        justify-items: center;
+        justify-content: center;
+    }
+    
+    .header {
+        grid-column: 1/2;
+    }
+
+    .tabs {
+        grid-column: 1/2;
+    }
+
+    .logo-box {
+        grid-column: 1/2;
+        grid-row: 3/4;
+        margin-top: 15rem;
+        justify-self: center;
+    }
+    
+}

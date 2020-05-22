@@ -7,7 +7,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { AboutComponent } from './about/about.component';
 import { SkillsComponent } from './skills/skills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { LandingComponent } from './landing/landing.component';
@@ -18,7 +17,6 @@ import { MaterialModule } from './material';
   declarations: [
     AppComponent,
     NavbarComponent,
-    AboutComponent,
     SkillsComponent,
     PortfolioComponent,
     LandingComponent,
