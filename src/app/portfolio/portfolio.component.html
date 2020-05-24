@@ -17,7 +17,7 @@
     </div>
 </mat-card>
 
-<ngb-carousel *ngIf="pictures" class="carousel">
+<ngb-carousel class="carousel">
     <ng-template ngbSlide *ngFor="let picture of pictures; let i = index">
       <div class="picsum-img-wrapper">
         <img [src]="pictures[i]">
@@ -26,7 +26,7 @@
 </ngb-carousel>
 
 <div class="projects-wrapper">
-    <div class="project-card" *ngFor="let project of projects" (click)="activateProject(project)">
+    <div class="project-card" *ngFor="let project of projectsArray" (click)="activateProject(project)">
       <img [src]="project.thumbnailUrl">
       <a mat-button class="button">{{ project.nameShort }}</a>
     </div>

@@ -11,19 +11,19 @@ trigger('routeAnimations', [
           left: 0,
           width: '100%'
         })
-      ]),
+      ], { optional: true }),
       query(':enter', [
         style({ opacity: 0 })
-      ]),
-      query(':leave', animateChild()),
+      ], { optional: true }),
+      query(':leave', animateChild(), { optional: true }),
       group([
         query(':leave', [
           animate('0.3s ease-out', style({ opacity: 0 }))
-        ]),
+        ], { optional: true }),
         query(':enter', [
           animate('0.3s 0.3s ease-out', style({ opacity: 1 }))
-        ])
+        ], { optional: true })
       ]),
-      query(':enter', animateChild()),
+      query(':enter', animateChild(), { optional: true }),
     ])
   ]);

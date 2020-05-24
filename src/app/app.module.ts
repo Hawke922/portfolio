@@ -12,6 +12,8 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { LandingComponent } from './landing/landing.component';
 import { ContactComponent } from './contact/contact.component';
 import { MaterialModule } from './material';
+import { Projects } from './data/projects';
+import { Skills } from './data/skills';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,7 @@ import { MaterialModule } from './material';
     MaterialModule,
     NgbModule
   ],
-  providers: [],
+  providers: [Projects, Skills],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

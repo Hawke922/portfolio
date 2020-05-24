@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Skills } from '../data/skills';
+import { ObservablesService } from '../services/observables.service';
+import { Skill } from '../models/skill';
 
 @Component({
   selector: 'app-skills',
@@ -6,115 +9,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent implements OnInit {
-  angular = {
-    id: 'angular',
-    name: 'Angular',
-    color: 'linear-gradient(225deg, #B52E31, #010615, #E23237)'
-  };
+  frontend: Skill[] = [this.skills.angular, this.skills.bootstrap, this.skills.material, this.skills.javascript,
+    this.skills.typescript, this.skills.css, this.skills.html];
+  backend: Skill[] = [this.skills.sharp, this.skills.net, this.skills.entity, this.skills.firebase,
+    this.skills.mysql, this.skills.nosql];
+  other: Skill[] = [this.skills.git, this.skills.postman, this.skills.xd, this.skills.code];
 
-  bootstrap = {
-    id: 'bootstrap',
-    name: 'Bootstrap',
-    color: 'linear-gradient(225deg, #563D7C, #010615, #563D7C)'
-  };
+  selectedSkill: Skill;
 
-  code = {
-    id: 'code',
-    name: 'VS Code',
-    color: 'linear-gradient(225deg, #B52E31, #010615, #E23237)'
-  };
+  constructor(private skills: Skills, private observablesService: ObservablesService) { }
 
-  css = {
-    id: 'css',
-    name: 'CSS3',
-    color: 'linear-gradient(225deg, #B52E31, #010615, #E23237)'
-  };
-  
-  firebase = {
-    id: 'firebase',
-    name: 'Google Firebase',
-    color: 'linear-gradient(225deg, #B52E31, #010615, #E23237)'
-  };
+  ngOnInit() {
+    this.observablesService.activeSkill.subscribe(skill => this.selectedSkill = skill);
+  }
 
-  nosql = {
-    id: 'firebase',
-    name: 'NoSQL (Firebase)',
-    color: 'linear-gradient(225deg, #B52E31, #010615, #E23237)'
-  };
-  
-  git = {
-    id: 'git',
-    name: 'Git',
-    color: 'linear-gradient(225deg, #B52E31, #010615, #E23237)'
-  };
-
-  html = {
-    id: 'html',
-    name: 'HTML5',
-    color: 'linear-gradient(225deg, #B52E31, #010615, #E23237)'
-  };
-  
-  javascript = {
-    id: 'javascript',
-    name: 'JavaScript',
-    color: 'linear-gradient(225deg, #B52E31, #010615, #E23237)'
-  };
-  
-  material = {
-    id: 'material',
-    name: 'Material Design',
-    color: 'linear-gradient(225deg, #B52E31, #010615, #E23237)'
-  };
-  
-  mysql = {
-    id: 'mysql',
-    name: 'SQL Databse (MySQL)',
-    color: 'linear-gradient(225deg, #B52E31, #010615, #E23237)'
-  };
-  
-  net = {
-    id: 'net',
-    name: '.Net Core',
-    color: 'linear-gradient(225deg, #B52E31, #010615, #E23237)'
-  };
-
-  entity = {
-    id: 'net',
-    name: 'Entity Framework Core',
-    color: 'linear-gradient(225deg, #B52E31, #010615, #E23237)'
-  };
-
-  postman = {
-    id: 'postman',
-    name: 'Postman',
-    color: 'linear-gradient(225deg, #B52E31, #010615, #E23237)'
-  };
-  
-  sharp = {
-    id: 'sharp',
-    name: 'C#',
-    color: 'linear-gradient(225deg, #B52E31, #010615, #E23237)'
-  };
-  
-  typescript = {
-    id: 'typescript',
-    name: 'Typescript',
-    color: 'linear-gradient(225deg, #B52E31, #010615, #E23237)'
-  };
-  
-  xd = {
-    id: 'xd',
-    name: 'Adobe XD',
-    color: 'linear-gradient(225deg, #B52E31, #010615, #E23237)'
-  };
-
-  frontend = [this.angular, this.bootstrap, this.material, this.javascript, this.typescript, this.css, this.html];
-  backend = [this.sharp, this.net, this.entity, this.firebase, this.mysql, this.nosql];
-  other = [this.git, this.postman, this.xd, this.code];
-
-  constructor() { }
-
-  ngOnInit(): void {
+  activateSkill(skill: Skill) {
+    this.observablesService.selectSkill(skill);
+    console.log(skill);
   }
 
 }
