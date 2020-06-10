@@ -25,7 +25,7 @@ export class SkillsComponent implements OnInit {
 
   activateSkill(skill: Skill) {
     this.observablesService.selectSkill(skill);
-    console.log(skill);
+    document.documentElement.style.setProperty('--skill-color', skill.color);
   }
 
 }

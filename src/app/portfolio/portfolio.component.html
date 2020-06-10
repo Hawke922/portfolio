@@ -1,19 +1,30 @@
+<div class="header-main">
+  <span>#</span>
+  <h2>Portfolio</h2>
+</div>
+
+<div class="projects-wrapper">
+  <div class="project-card" *ngFor="let project of projectsArray" (click)="activateProject(project)">
+    <img [src]="project.thumbnailUrl">
+    <a mat-button class="button">{{ project.nameShort }}</a>
+  </div>
+</div>
+
 <mat-card class="project-detail">
     <div class="header">
-        <div class="header-main">
-            <span>#</span>
-            <h2>Portfolio</h2>
-        </div>
-        <h3>{{ selectedProject.nameLong }}</h3>
+      <h3>{{ selectedProject.nameLong }}</h3>
+      <h4 *ngIf="selectedProject.wip">(work in progress)</h4>
     </div>
     <div class="description">
-        <p [ngStyle]="{'text-align': 'left'}">
-          {{ selectedProject.description }}
-        </p>
+      <h4>Front-End: </h4><p>{{ selectedProject.frontEnd }}</p>
+      <mat-divider inset=“true”></mat-divider>
+      <h4 *ngIf="selectedProject.backEnd">Back-End: </h4><p>{{ selectedProject.backEnd }}</p>
+      <mat-divider inset=“true” *ngIf="selectedProject.backEnd"></mat-divider>
+      <h4>Description: </h4><p [ngStyle]="{'text-align': 'left'}">{{ selectedProject.description }}</p>
     </div>
     <div class="buttons">
-      <button mat-button *ngIf="selectedProject.github">GitHub Code</button>
-      <button mat-button *ngIf="selectedProject.live">Live Version</button>
+      <a *ngIf="selectedProject.github" mat-button href="{{ selectedProject.githubUrl }}" target="_blank" class="link">Github Code</a>
+      <a *ngIf="selectedProject.live" mat-button href="{{ selectedProject.liveUrl }}" target="_blank" class="link">Live Version</a>
     </div>
 </mat-card>
 
@@ -24,10 +35,3 @@
       </div>
     </ng-template>
 </ngb-carousel>
-
-<div class="projects-wrapper">
-    <div class="project-card" *ngFor="let project of projectsArray" (click)="activateProject(project)">
-      <img [src]="project.thumbnailUrl">
-      <a mat-button class="button">{{ project.nameShort }}</a>
-    </div>
-</div>

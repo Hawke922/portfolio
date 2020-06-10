@@ -11,8 +11,8 @@ import { ObservablesService } from '../services/observables.service';
 
 export class PortfolioComponent implements OnInit {
 
-  projectsArray: Project[] = [this.projects.keks, this.projects.silver,
-  this.projects.datingapp, this.projects.iron, this.projects.starWars];
+  projectsArray: Project[] = [this.projects.keks, this.projects.datingapp, this.projects.starWars, this.projects.silver,
+    this.projects.iron];
 
   pictures: any[];
 

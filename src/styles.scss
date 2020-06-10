@@ -60,10 +60,6 @@ html, body {
     font-size: 62.5%;
     color: #fff;
     height: 100%;
-    // background-image: url("/assets/bg-laptop.jpg");
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // background-position: center;
     background-color: #000;
 }
 
@@ -76,4 +72,8 @@ body {
 
 main {
     position: relative;
+}
+
+:root {
+    --skill-color: linear-gradient(225deg, #B52E31, #010615, #E23237);
 }
