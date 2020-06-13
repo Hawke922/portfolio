@@ -2,36 +2,27 @@ $skill: var(--skill-color);
 
 :host {
     display: grid;
-    grid-template-columns: 1fr 48rem 65rem 1fr;
+    grid-template-columns: repeat(4, 1fr);
     padding-top: 7rem;
+    padding-bottom: 5rem;
     position: relative;
     z-index: 1;
 }
 
 .header {
     grid-column: 2/3;
+    margin-left: 3rem;
 }
 
-.header-main {
-    display: flex;
-    align-items: center;
-}
-
-.header-main span, .header-main h2 {
-    font-size: 2.7rem;
+.header h2 {
+    font-size: 3rem;
     font-weight: 500;
     letter-spacing: 0.7rem;
     margin: 0;
 }
 
-.header-main span {
+.header span {
     color: #BC0606;
-    margin-right: 0.5rem;
-}
-
-.tabs {
-    grid-column: 2/3;
-    width: 48rem;
 }
 
 .header h3{
@@ -40,18 +31,26 @@ $skill: var(--skill-color);
     margin: 3rem 0;
 }
 
+.tabs {
+    grid-column: 2/3;
+    width: 48rem;
+    height: 55rem;
+    justify-self: end;
+    margin: 0 3rem;
+}
+
 .tab {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin-top: 0.3rem;
 }
-/*white-space: normal added to make sure that ngfor break lines properly*/
-/*white-space: pre-line will break lines only where I do /n within the value itself*/
+// /*white-space: normal added to make sure that ngfor break lines properly*/
+// /*white-space: pre-line will break lines only where I do /n within the value itself*/
 .box {
     margin: 0.3rem;
     width: 15.3rem;
     height: 15.3rem;
-    background-color: #161616;
+    background-color: #38383849;
     display: grid;
     place-items: center;
     font-size: 2rem;
@@ -62,12 +61,12 @@ $skill: var(--skill-color);
 
 .logo-box {
     grid-column: 3/4;
-    grid-row: 1/4;
-    margin-top: 15rem;
-    justify-self: end;
+    justify-self: start;
+    align-self: center;
     position: relative;
     width: 40rem;
     height: 40rem;
+    margin: 0 3rem;
     background-color: #000;
 }
 
@@ -96,12 +95,13 @@ $skill: var(--skill-color);
     width: 90%;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1050px) {
     :host {
-        grid-template-columns: 65rem;
-        padding-bottom: 7rem;
-        justify-items: center;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: 1fr;
+        padding-top: 7rem;
+        position: relative;
+        z-index: 1;
     }
     
     .header {
@@ -110,13 +110,48 @@ $skill: var(--skill-color);
 
     .tabs {
         grid-column: 1/2;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        margin-bottom: 3rem;
+    }
+    
+    .tab {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 0.3rem;
     }
 
     .logo-box {
         grid-column: 1/2;
-        grid-row: 3/4;
-        margin-top: 15rem;
         justify-self: center;
     }
-    
+}
+
+@media screen and (max-width: 650px) {
+    .box {
+        margin: 0.3rem;
+        width: 10rem;
+        height: 10rem;
+        font-size: 1.5rem;
+        font-weight: 300;
+        line-height: 2rem;
+        white-space: normal;
+        padding: 0.2rem;
+    }
+
+    .logo-box {
+        width: 30rem;
+        height: 30rem;
+    }
+
+    .header h2 {
+        margin: 0;
+    }
+
+    .header h3{
+        font-size: 3rem;
+        margin: 1rem 0;
+    }
 }

@@ -10,14 +10,14 @@ lorem = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     nameShort: 'Star Wars App',
     frontEnd: 'Angular',
     description: `Simple application that served as practice of Angular Routing, Services, Forms and Observables.\n
-    During the development of the "Social App" I realized that I needed more hands on experience with Angular, so over the course of few days this lightweight practice app came to light.`,
+    During the development of the "Social App" I realized that I needed more hands on experience with Angular, so over the course of a few days this lightweight practice app came to light.`,
     githubUrl: 'https://github.com/Hawke922/star-wars-project',
     liveUrl: 'https://hawke922.github.io/star-wars-project/',
-    thumbnailUrl: '/assets/projects/starWars/thumbnail.jpg',
+    thumbnailUrl: '/portfolio/assets/starWarsThumb.jpg',
     github: true,
     live: true,
     wip: false,
-    pictures: [1, 2]
+    pictures: ['starWars1', 'starWars2']
   };
 
   datingapp: Project = {
@@ -26,16 +26,15 @@ lorem = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     nameShort: 'Social App',
     frontEnd: 'Angular, Bootstrap',
     backEnd: 'ASP .Net Core, Entity Framework, SQL Server, Published on Azure',
-    description: `My first major project created with intetion to focus on learning. Instead of UI/UX, effort was placed on implementing wide range of .Net Core and Angular features. \n
-    App Features: Authentication, Reactive Register and Login forms, SQL Database (seeding data from API), Gallery + Photo Upload, Private Messaging System, "Like" Functionality, Pagination and much more. \n
-    If you want to preview live version, please give it a moment to load up as it is hosted on a trial version of Microsoft Azure.`,
+    description: `My first major project created with the intention to focus on learning. Instead of UI/UX, effort was placed on implementing wide range of .Net Core and Angular features. \n
+    App Features: Authentication, Reactive Register and Login forms, SQL Database (seeding data from API), Gallery + Photo Upload, Private Messaging System, "Like" Functionality, Pagination and much more.`,
     githubUrl: 'https://github.com/Hawke922/DemoApp',
     liveUrl: 'https://demosocialapp.azurewebsites.net/',
-    thumbnailUrl: '/assets/projects/datingApp/thumbnail.jpg',
+    thumbnailUrl: '/portfolio/assets/datingAppThumb.jpg',
     github: true,
     live: true,
     wip: false,
-    pictures: [1, 2, 3, 4, 5]
+    pictures: ['datingApp1', 'datingApp2', 'datingApp3', 'datingApp4', 'datingApp5']
   };
 
   iron: Project = {
@@ -44,12 +43,12 @@ lorem = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     nameShort: 'Workout App',
     frontEnd: 'Angular, Material design',
     backEnd: 'Firebase + Firestore',
-    description: 'Fledgling personal project. Got postponed since I started working on "KE-KS.sk" project for client.',
-    thumbnailUrl: '/assets/projects/iron/thumbnail.jpg',
+    description: 'Fledgling personal project. It got postponed since I started working on "KE-KS.sk" project for client.',
+    thumbnailUrl: '/portfolio/assets/ironThumb.jpg',
     github: false,
     live: false,
     wip: true,
-    pictures: [1, 2, 3, 4]
+    pictures: ['iron1', 'iron2', 'iron3', 'iron4']
   };
 
   keks: Project = {
@@ -58,13 +57,13 @@ lorem = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     nameShort: 'KE-KS.sk',
     frontEnd: 'Angular, Material Design',
     backEnd: 'Firebase + Firestore',
-    description: 'Project I\'m actively working on for "Občianske združenie Košických kaktusárov". App is planned to contain three main parts - blog, gallery and event planner.  \n \n As design was alredy approved by client, project is being worked on right now, see code in github repo.',
-    thumbnailUrl: '/assets/projects/keks/thumbnail.jpg',
+    description: 'Project I\'m actively working on for "Občianske združenie Košických kaktusárov". The app is planned to contain three main parts - blog, gallery and event planner.  \n \n As design was alredy approved by client, project is being worked on right now, see code in github repo.',
+    thumbnailUrl: '/portfolio/assets/keksThumb.jpg',
     githubUrl: 'https://github.com/Hawke922/ke-ks',
     github: true,
     live: false,
     wip: true,
-    pictures: [1, 2, 3, 4, 5]
+    pictures: ['keks1', 'keks2', 'keks3', 'keks4', 'keks5']
   };
 
   silver: Project = {
@@ -73,12 +72,12 @@ lorem = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     nameShort: 'Fantasy Game',
     frontEnd: 'Angular, Bootstrap',
     backEnd: 'ASP .Net Core, Entity Framework, SQL Server',
-    description: 'Personal project I\'ve been working on bit by bit for a few months now. \n \n Lacking just few features and a bit of polish, live version will be published as soon as my schedule wont be occupied by "KE-KS.sk" project.',
-    thumbnailUrl: '/assets/projects/silver/thumbnail.jpg',
+    description: 'Personal project I\'ve been working on bit by bit for a few months now. \n \n Lacking just a few features and some polish, live version will be published as soon as my schedule wont be occupied by "KE-KS.sk" project.',
+    thumbnailUrl: '/portfolio/assets/silverThumb.jpg',
     githubUrl: 'https://github.com/Hawke922/SilverApp',
     github: true,
     live: false,
     wip: true,
-    pictures: [1, 2, 3, 4, 5, 6, 7]
+    pictures: ['silver1', 'silver2', 'silver3', 'silver4', 'silver5', 'silver6', 'silver7']
   };
 }

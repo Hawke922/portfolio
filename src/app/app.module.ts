@@ -14,6 +14,8 @@ import { ContactComponent } from './contact/contact.component';
 import { MaterialModule } from './material';
 import { Projects } from './data/projects';
 import { Skills } from './data/skills';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { Skills } from './data/skills';
     FontAwesomeModule,
     BrowserAnimationsModule,
     MaterialModule,
-    NgbModule
+    NgbModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [Projects, Skills],
   bootstrap: [AppComponent]

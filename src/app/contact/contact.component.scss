@@ -6,7 +6,7 @@
 
 .contact-card {
     background: #000;
-    width: 60rem;
+    max-width: 60rem;
 }
 
 .header-main {
@@ -65,4 +65,10 @@
 
 .links button {
     justify-self: end;
+}
+
+@media screen and (max-width: 540px) {
+    .links span, .links button {
+        display: none;
+    }
 }

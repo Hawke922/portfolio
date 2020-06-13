@@ -1,27 +1,24 @@
 <div class="header">
-    <div class="header-main">
-        <span>#</span>
-        <h2>Skills</h2>
-    </div>
+    <h2><span>#</span>Skills</h2>
     <h3>Technologies I work with</h3>
 </div>
-<mat-tab-group mat-tabs [dynamicHeight]='true' class="tabs mat-elevation-z4">
+<mat-tab-group mat-stretch-tabs dynamicHeight class="tabs">
     <mat-tab label="Front-End">
         <div class="tab">
             <a mat-button class="box" *ngFor="let skill of frontend" (mouseenter)="activateSkill(skill)">{{ skill.name }}</a>
         </div>
     </mat-tab>
-    <mat-tab label="Back-End" class="tab">
+    <mat-tab label="Back-End">
         <div class="tab">
             <a mat-button class="box" *ngFor="let skill of backend" (mouseenter)="activateSkill(skill)">{{ skill.name }}</a>
         </div>
     </mat-tab>
-    <mat-tab label="Other" class="tab">
+    <mat-tab label="Other">
         <div class="tab">
             <a mat-button class="box" *ngFor="let skill of other" (mouseenter)="activateSkill(skill)">{{ skill.name }}</a>
         </div>
     </mat-tab>
 </mat-tab-group>
 <div class="logo-box">
-    <img src="../../assets/logos/{{ selectedSkill.id }}.svg">
+    <img src="/portfolio/assets/{{ selectedSkill.id }}.svg">
 </div>

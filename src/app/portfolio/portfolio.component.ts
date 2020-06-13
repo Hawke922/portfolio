@@ -22,12 +22,12 @@ export class PortfolioComponent implements OnInit {
 
   ngOnInit() {
     this.observablesService.activeProject.subscribe(project => this.selectedProject = project);
-    this.pictures = this.selectedProject.pictures.map((n) => `/assets/projects/${this.selectedProject.id}/${n}.jpg`);
+    this.pictures = this.selectedProject.pictures.map((n) => `/portfolio/assets/${n}.jpg`);
   }
 
   activateProject(project: Project) {
     this.observablesService.selectProject(project);
-    this.pictures = project.pictures.map((n) => `/assets/projects/${project.id}/${n}.jpg`);
+    this.pictures = project.pictures.map((n) => `/portfolio/assets/${n}.jpg`);
   }
 
 }
