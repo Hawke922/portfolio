@@ -6,12 +6,10 @@
 
 .contact-card {
     background: #000;
-    max-width: 60rem;
+    max-width: 55rem;
 }
 
 .header-main {
-    display: flex;
-    align-items: center;
     margin-bottom: 3rem;
 }
 
@@ -24,7 +22,6 @@
 
 .header-main span {
     color: #BC0606;
-    margin-right: 0.5rem;
 }
 
 .about p {
@@ -68,6 +65,18 @@
 }
 
 @media screen and (max-width: 540px) {
+
+    .header-main span, .header-main h2 {
+        font-size: 2.3rem;
+        font-weight: 500;
+        letter-spacing: 0.4rem;
+        margin: 0;
+    }
+    
+    .header-main span {
+        color: #BC0606;
+    }
+
     .links span, .links button {
         display: none;
     }

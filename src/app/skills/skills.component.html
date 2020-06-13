@@ -3,17 +3,17 @@
     <h3>Technologies I work with</h3>
 </div>
 <mat-tab-group mat-stretch-tabs dynamicHeight class="tabs">
-    <mat-tab label="Front-End">
+    <mat-tab label="Front-End" class="label">
         <div class="tab">
             <a mat-button class="box" *ngFor="let skill of frontend" (mouseenter)="activateSkill(skill)">{{ skill.name }}</a>
         </div>
     </mat-tab>
-    <mat-tab label="Back-End">
+    <mat-tab label="Back-End" class="label">
         <div class="tab">
             <a mat-button class="box" *ngFor="let skill of backend" (mouseenter)="activateSkill(skill)">{{ skill.name }}</a>
         </div>
     </mat-tab>
-    <mat-tab label="Other">
+    <mat-tab label="Other" class="label">
         <div class="tab">
             <a mat-button class="box" *ngFor="let skill of other" (mouseenter)="activateSkill(skill)">{{ skill.name }}</a>
         </div>

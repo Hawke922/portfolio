@@ -131,13 +131,11 @@ $skill: var(--skill-color);
 
 @media screen and (max-width: 650px) {
     .box {
-        margin: 0.3rem;
+        margin: 0.2rem;
         width: 10rem;
         height: 10rem;
         font-size: 1.5rem;
-        font-weight: 300;
         line-height: 2rem;
-        white-space: normal;
         padding: 0.2rem;
     }
 
@@ -153,5 +151,24 @@ $skill: var(--skill-color);
     .header h3{
         font-size: 3rem;
         margin: 1rem 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .header {
+        margin-left: 1.5rem;
+    }
+
+    .header h2, .header h3 {
+        font-size: 2.3rem;
+    }
+
+    .header h2 {
+        letter-spacing: 0.4rem;
+    }
+
+    .logo-box {
+        width: 25rem;
+        height: 25rem;
     }
 }

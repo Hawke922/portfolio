@@ -9,7 +9,7 @@
 // Be sure that you only ever include this mixin once!
 $custom-typography: mat-typography-config(
     $font-family: 'Montserrat',
-    $button: mat-typography-level(20px, 20px, 300)
+    $button: mat-typography-level(2rem, 2rem, 300)
 );
 
 @include mat-core($custom-typography);
@@ -110,4 +110,12 @@ main {
 
 :root {
     --skill-color: linear-gradient(225deg, #B52E31, #010615, #E23237);
+}
+
+@media screen and (max-width: 400px)
+{
+  .tabs .mat-tab-label{
+    padding: 0.5rem;
+    font-size: 1.6rem;
+  }
 }

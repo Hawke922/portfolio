@@ -9,11 +9,32 @@ import { Skill } from '../models/skill';
   styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent implements OnInit {
-  frontend: Skill[] = [this.skills.angular, this.skills.bootstrap, this.skills.material, this.skills.javascript,
-    this.skills.typescript, this.skills.css, this.skills.html];
-  backend: Skill[] = [this.skills.sharp, this.skills.net, this.skills.entity, this.skills.firebase,
-    this.skills.mysql, this.skills.nosql];
-  other: Skill[] = [this.skills.git, this.skills.postman, this.skills.xd, this.skills.code];
+
+  frontend: Skill[] = [
+    this.skills.angular,
+    this.skills.bootstrap,
+    this.skills.material,
+    this.skills.javascript,
+    this.skills.typescript,
+    this.skills.css,
+    this.skills.html
+  ];
+
+  backend: Skill[] = [
+    this.skills.sharp,
+    this.skills.net,
+    this.skills.entity,
+    this.skills.firebase,
+    this.skills.mysql,
+    this.skills.nosql
+  ];
+
+  other: Skill[] = [
+    this.skills.git,
+    this.skills.postman,
+    this.skills.xd,
+    this.skills.code
+  ];
 
   selectedSkill: Skill;
 
